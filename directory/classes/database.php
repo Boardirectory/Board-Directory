@@ -9,7 +9,7 @@ class Database {
 		global $board_url;
 		$this->con = @mysql_connect('localhost', 'board_board1', base64_decode(file_get_contents($board_url . 'includes/dbpass')));
 		if(!@mysql_select_db('_bis', $this->con)) {
-			trigger_error('Could not connect to database', E_USER_ERROR);
+			trigger_error('Could not connect to database. ', E_USER_ERROR);
 		}
 	}
 	
