@@ -1,0 +1,8 @@
+"NV advanced last topic titles" MOD
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding a key named altt to table alvt_topics
+ERROR: The index altt already exists on table alvt_topics.
+

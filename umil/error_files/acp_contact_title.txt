@@ -1,0 +1,8 @@
+Contact Board Admin
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding acp module: acp/info/acp_contact.php
+Fail
+

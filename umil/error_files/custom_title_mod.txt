@@ -1,0 +1,8 @@
+Custom Title MOD
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding a new column named user_custom_title to table alvt_users
+ERROR: The column user_custom_title already exists on table alvt_users.
+

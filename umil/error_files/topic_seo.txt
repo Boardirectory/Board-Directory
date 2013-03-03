@@ -1,0 +1,14 @@
+Topic SEO
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding a new column named seo_desc to table alvt_topics
+ERROR: The column seo_desc already exists on table alvt_topics.
+
+Adding a new column named seo_key to table alvt_topics
+ERROR: The column seo_key already exists on table alvt_topics.
+
+Adding a new column named topic_seo_title to table alvt_topics
+ERROR: The column topic_seo_title already exists on table alvt_topics.
+

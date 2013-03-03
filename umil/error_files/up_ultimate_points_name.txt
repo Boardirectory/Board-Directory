@@ -1,0 +1,17 @@
+Ultimate Points
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding a new column named forum_perpost to table alvt_forums
+ERROR: The column forum_perpost already exists on table alvt_forums.
+
+Adding a new column named forum_peredit to table alvt_forums
+ERROR: The column forum_peredit already exists on table alvt_forums.
+
+Adding a new column named forum_pertopic to table alvt_forums
+ERROR: The column forum_pertopic already exists on table alvt_forums.
+
+Adding a key named holding to table POINTS_BANK_TABLE
+SQL ERROR Table 'board_1.POINTS_BANK_TABLE' doesn't exist
+

@@ -1,0 +1,8 @@
+FAQ Manager
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Removing acp module: acp/info/acp_faq_manager.php
+Fail
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{{S_CONTENT_DIRECTION}}" lang="{{S_USER_LANG}}" xml:lang="{{S_USER_LANG}}">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset={{S_CONTENT_ENCODING}}" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-language" content="{{S_USER_LANG}}" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="resource-type" content="document" />
+	<meta name="distribution" content="global" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	{{META}}
+	<title>{{lang.sitename}} {% if pagetitle %}&bull; {{PAGE_TITLE}} {% endif %}</title>
+	<link href="{{directory_root}}themes/prosilver.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="outterWrap">
+	<div id="innerWrap">
+		{% include template %}
+	</div>
+</div>

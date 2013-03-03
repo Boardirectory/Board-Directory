@@ -1,0 +1,71 @@
+<!-- INCLUDE bis/bis_dir_header.html -->
+
+<form id="bis_dir" method="post" action="{S_ACTION}">
+	<h2>{L_BIS_SUBMIT_BOARD}</h2>
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<p>{L_BIS_MARKED_REQUIRED}</p>
+			<fieldset>
+				<!-- BEGIN bis_submit_errors --><p class="bis_error">{bis_submit_errors.ERROR_MESSAGE}</p><!-- END bis_submit_errors -->
+				<dl>
+					<dt><label for="bis_field_board_name">{L_BIS_FIELD_BOARD_NAME}: *</label><br/></dt>
+					<dd><input type="text" name="bis_field_board_name" required="required" id="bis_field_board_name" maxlength="30" value="{BIS_FIELD_BOARD_NAME}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_category">{L_BIS_FIELD_BOARD_CATEGORY}: *</label><br/><span>{L_BIS_FIELD_BOARD_CATEGORY_EXPLAIN}</span></dt>
+					<dd><select name="bis_field_board_category" required="required" id="bis_field_board_category"><!-- BEGIN bis_categories --><option value="{bis_categories.ID}"<!-- IF BIS_FIELD_BOARD_CATEGORY == bis_categories.ID --> selected="selected"<!-- ENDIF -->>{bis_categories.L_NAME}</option><!-- END bis_categories --></select></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_abr">{L_BIS_FIELD_BOARD_ABR}:</label><br/><span>{L_BIS_FIELD_BOARD_ABR_EXPLAIN}</span></dt>
+					<dd><input type="text" name="bis_field_board_abr"" id="bis_field_board_abr" maxlength="5" value="{BIS_FIELD_BOARD_ABR}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_url">{L_BIS_FIELD_BOARD_URL}: *</label><br/><span>{L_BIS_FIELD_BOARD_URL_EXPLAIN}</span></dt>
+					<dd><input type="url" name="bis_field_board_url" required="required" placeholder="http://" id="bis_field_board_url" maxlength="60" value="{BIS_FIELD_BOARD_URL}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="home_url">{L_BIS_FIELD_HOME_URL}:</label><br/><span>{L_BIS_FIELD_HOME_URL_EXPLAIN}</span></dt>
+					<dd><input type="url" name="bis_field_home_url" placeholder="http://" id="bis_field_home_url" maxlength="60" value="{BIS_HOME_URL}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_slug">{L_BIS_FIELD_BOARD_SLUG}: *</label><br/><span>{L_BIS_FIELD_BOARD_SLUG_EXPLAIN}</span></dt>
+					<dd><input type="text" name="bis_field_board_slug" required="required" id="bis_field_board_slug" maxlength="250" value="{BIS_FIELD_BOARD_SLUG}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_slogan">{L_BIS_FIELD_BOARD_SLOGAN}:</label><br/></dt>
+					<dd><input type="text" name="bis_field_board_slogan" id="bis_field_board_slogan" maxlength="50" value="{BOARD_SLOGAN}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_description">{L_BIS_FIELD_BOARD_DESCRIPTION}: *</label><br/><span>{L_BIS_FIELD_BOARD_DESCRIPTION_EXPLAIN}</span></dt>
+					<dd><textarea name="bis_field_board_description" id="bis_field_board_description" rows="8" style="width:85%;" value="" >{BOARD_DESCRIPTION}</textarea></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_logo_url">{L_BIS_FIELD_BOARD_LOGO_URL}: *</label><br/><span></span></dt>
+					<dd><input type="url" name="bis_field_board_logo_url" required="required" placeholder="http://" id="bis_field_board_logo_url" maxlength="70" value="{BIS_FIELD_BOARD_LOGO_URL}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_software">{L_BIS_FIELD_BOARD_SOFTWARE}: *</label><br/><span>{L_BIS_FIELD_BOARD_SOFTWARE_EXPLAIN}</span></dt>
+					<dd><select name="bis_field_board_software" required="required" id="bis_field_board_software"><!-- BEGIN bis_software --><option value="{bis_software.ID}"<!-- IF BIS_FIELD_BOARD_SOFTWARE == bis_software.ID --> selected="selected"<!-- ENDIF -->>{bis_software.L_NAME}</option><!-- END software_types --></select></dd>
+				</dl>
+				<dl>
+					<dt><label for="bis_field_board_total_posts">{L_BIS_FIELD_BOARD_TOTAL_POSTS}: *</label><br/></dt>
+					<dd><input type="number" min="0" name="bis_field_board_total_posts" required="required" id="bis_field_board_total_posts" maxlength="9" value="{BIS_FIELD_BOARD_TOTAL_POSTS}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="board_total_topics">{L_BIS_FIELD_BOARD_TOTAL_TOPICS}: *</label><br/></dt>
+					<dd><input type="number" min="0" name="bis_field_board_total_topics" required="required" id="bis_field_board_total_topics" maxlength="7" value="{BIS_FIELD_BOARD_TOTAL_TOPICS}" class="inputbox" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="board_total_members">{L_BIS_FIELD_BOARD_TOTAL_MEMBERS}: *</label><br/></dt>
+					<dd><input type="number" min="0" name="bis_field_board_total_members" required="required" id="bis_field_board_total_members" maxlength="8" value="{BIS_FIELD_BOARD_TOTAL_MEMBERS}" class="inputbox" /></dd>
+				</dl>
+			</fieldset>
+			<br/>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<fieldset class="submit-buttons">
+		<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />
+	</fieldset>
+</form>
+<!-- INCLUDE bis/bis_dir_footer.html -->

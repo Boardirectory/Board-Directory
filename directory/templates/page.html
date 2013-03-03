@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset={{S_CONTENT_ENCODING}}" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="content-language" content="{{S_USER_LANG}}" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="resource-type" content="document" />
+		<meta name="distribution" content="global" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		{{META}}
+		<title>{{lang.sitename}} {% if pagetitle %}&bull; {{PAGE_TITLE}} {% endif %}</title>
+		<link href="{{directory_root}}theme.php?theme={{style.name}}" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="outterWrap">
+			<div id="innerWrap">
+				<div id="header">
+					<a href="{{directory_root}}" id="logo"></a>
+				</div>
+				<div id="content">
+					<div id="nav-bar">
+						<a class="nav-item" id="nav-item-index" href="{{directory_root}}">{{lang.index}}</a>
+					</div>
+				</div>
+				{% include template %}
+			</div>
+		</div>
+	</body>
+</html>

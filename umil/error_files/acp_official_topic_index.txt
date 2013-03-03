@@ -1,0 +1,11 @@
+Official Topic Index
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding a new column named inindex_topic to table alvt_topics
+ERROR: The column inindex_topic already exists on table alvt_topics.
+
+Adding a new column named outindex_topic to table alvt_topics
+ERROR: The column outindex_topic already exists on table alvt_topics.
+

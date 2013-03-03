@@ -1,0 +1,68 @@
+Mini-Chat
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding new permission option: u_mchat_smilies
+SQL ERROR Duplicate entry 'u_mchat_smilies' for key 'auth_option'
+
+Adding acp module: mChat
+ERROR: Module already exists.
+
+Adding acp module: acp/info/acp_mchat.php
+Fail
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'prune_enable' for key 'PRIMARY'
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'location' for key 'PRIMARY'
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'whois_refresh' for key 'PRIMARY'
+
+Adding new config variable: mchat_on_index
+ERROR: Config variable mchat_on_index already exists.
+
+Adding new config variable: mchat_new_posts
+ERROR: Config variable mchat_new_posts already exists.
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'static_message' for key 'PRIMARY'
+
+Adding a new column named user_mchat_index to table alvt_users
+SQL ERROR Duplicate column name 'user_mchat_index'
+
+Adding a new column named user_mchat_sound to table alvt_users
+SQL ERROR Duplicate column name 'user_mchat_sound'
+
+Adding a new column named user_mchat_stats_index to table alvt_users
+SQL ERROR Duplicate column name 'user_mchat_stats_index'
+
+Adding a new database table: alvt_mchat_sessions
+SQL ERROR Table 'alvt_mchat_sessions' already exists
+
+Adding acp module: ACP_USER_MCHAT
+ERROR: Module already exists.
+
+Adding ucp module: mChat Prefs
+ERROR: Module already exists.
+
+Adding ucp module: ucp/info/ucp_mchat.php
+Fail
+
+Adding a key named user_id to table alvt_mchat
+SQL ERROR Duplicate key name 'user_id'
+
+Adding a new column named user_mchat_topics to table alvt_users
+SQL ERROR Duplicate column name 'user_mchat_topics'
+
+Adding a new column named user_mchat_avatars to table alvt_users
+SQL ERROR Duplicate column name 'user_mchat_avatars'
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'rules' for key 'PRIMARY'
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'avatars' for key 'PRIMARY'
+

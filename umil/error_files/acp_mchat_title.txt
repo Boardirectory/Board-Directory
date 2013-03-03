@@ -1,0 +1,50 @@
+Mini-Chat
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Adding new config variable: mchat_enable
+ERROR: Config variable mchat_enable already exists.
+
+Adding a new database table: alvt_mchat_config
+ERROR: Database table alvt_mchat_config already exists.
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'refresh' for key 'PRIMARY'
+
+Adding new permission option: u_mchat_view
+SQL ERROR Duplicate entry 'u_mchat_view' for key 'auth_option'
+
+Adding new permission option: u_mchat_ip
+SQL ERROR Duplicate entry 'u_mchat_ip' for key 'auth_option'
+
+Adding new permission option: u_mchat_flood_ignore
+ERROR: Permission option u_mchat_flood_ignore already exists.
+
+Adding new permission option: u_mchat_bbcode
+ERROR: Permission option u_mchat_bbcode already exists.
+
+Adding new permission option: u_mchat_urls
+SQL ERROR Duplicate entry 'u_mchat_urls' for key 'auth_option'
+
+Adding new permission option: a_mchat
+ERROR: Permission option a_mchat already exists.
+
+Adding acp module: acp/info/acp_mchat.php
+Fail
+
+Adding ucp module: ucp/info/ucp_mchat.php
+Fail
+
+Adding a new column named forum_id to table alvt_mchat
+SQL ERROR Duplicate column name 'forum_id'
+
+Adding a new column named post_id to table alvt_mchat
+SQL ERROR Duplicate column name 'post_id'
+
+The mChat table was successfully updated
+SQL ERROR Duplicate column name 'post_id'
+
+Inserting data in the alvt_mchat_config database table.
+SQL ERROR Duplicate entry 'pause_on_input' for key 'PRIMARY'
+

@@ -1,0 +1,8 @@
+Advanced BBcodes Box 3
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Updating a column named bbcode_id from table alvt_bbcodes
+SQL ERROR Out of range value for column 'bbcode_id' at row 33
+

@@ -1,0 +1,11 @@
+UPS Easy Shop
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Updating a column named icon_width from table SHOP_ITEMS_TABLE
+ERROR: The column icon_width does not exist on table SHOP_ITEMS_TABLE.<br /><br />SQL ERROR Table 'board_1.SHOP_ITEMS_TABLE' doesn't exist
+
+Updating a column named icon_height from table SHOP_ITEMS_TABLE
+ERROR: The column icon_height does not exist on table SHOP_ITEMS_TABLE.<br /><br />SQL ERROR Table 'board_1.SHOP_ITEMS_TABLE' doesn't exist
+

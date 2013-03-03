@@ -1,0 +1,11 @@
+Simple Comment Mod
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Removing acp module: acp/info/acp_comment.php
+Fail
+
+Removing acp module: ACP_COMMENT
+Unable to remove module, it has assigned children. Please remove or move all children before performing this action.
+

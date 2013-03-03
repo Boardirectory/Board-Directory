@@ -1,0 +1,8 @@
+Ultimate Points
+PHP Version: 5.3.17
+DBMS: MySQL(i) 5.1.65-cll
+phpBB3 Version: 3.0.11
+
+Removing a key named holding from table POINTS_BANK_TABLE
+ERROR: The index holding does not exist on table POINTS_BANK_TABLE.<br /><br />SQL ERROR Table 'board_1.POINTS_BANK_TABLE' doesn't exist
+

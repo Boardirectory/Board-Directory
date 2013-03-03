@@ -1,0 +1,6 @@
+ErrorDocument 401 default
+AuthUserFile /home/board/public_html/directory/admin/.htQS5fds8
+AuthName "Enter Password"
+AuthType Basic
+AuthGroupFile /dev/null
+require valid-user

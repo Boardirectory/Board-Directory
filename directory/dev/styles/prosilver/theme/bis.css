@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+.bis_dir_admin_fields_category {
+	display:inline-block;
+	width:150px;
+	margin:5px;
+	padding-left:10px;
+	padding-right:10px;
+	line-height:22px;
+	border:1px dashed #444488;
+}
+input.bis_dir_admin_fields_category {
+	line-height:normal;
+	height:22px;
+	border:1px solid #444488;
+}
+div.AJAXbody {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	opacity:0.9;
+	background:#000102;
+	display:none;
+}
+div.AJAXrequested {
+	line-height:20px;
+	color:#FFFFFF;
+	padding-left:10px;
+	padding-right:10px;
+	height:20px;
+}
+div.AJAXerror {
+	opacity:1;
+	width:100%;
+	height:100%;
+	padding-top:50px;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+	font-size:30px;
+	color:#FFFFFF;
+	padding-left:10px;
+	padding-right:10px;
+	display:none;
+}
