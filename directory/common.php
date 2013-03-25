@@ -15,11 +15,6 @@ try {
 	$db = new PDO('mysql:host=localhost;dbname=bis', 'bis', utf8_decode(file_get_contents($directory_root_path . 'includes/dbpass')), array(
 		PDO::ATTR_PERSISTENT	=> true,
 	));
-	include($phpbb_root_path . 'config.php');
-	$dbphpBB = new PDO('mysql:host=localhost;dbname=board', 'board', $dbpasswd, array(
-		PDO::ATTR_PERSISTENT	=> true,
-	));
-	unset($dbpasswd);
 	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 } catch(PDOException $ex) {
 	trigger_error($ex->getMessage(), E_USER_ERROR);
