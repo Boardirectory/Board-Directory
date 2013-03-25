@@ -4,10 +4,10 @@
 $dbms = 'mysqli';
 $dbhost = '';
 $dbport = '';
-$dbname = 'board_board';
-$dbuser = 'board_board1';
+$dbname = 'board';
+$dbuser = 'board';
 $dbpasswd = 'vUvQ9Ebz3VvZqR7q';
-$table_prefix = 'alvt_';
+$table_prefix = '';
 $acm_type = 'file';
 $load_extensions = '';
 
