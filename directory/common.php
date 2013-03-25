@@ -12,7 +12,7 @@ $bis = new BIS();
 $template = new DirectoryTemplate();
 
 try {
-	$db = new PDO('mysql:host=localhost;dbname=bis', 'bis', utf8_decode(file_get_contents($directory_root_path . 'includes/dbpass')), array(
+	$db = new PDO('mysql:host=localhost;dbname=bis', 'bis', base64_decode(file_get_contents($directory_root_path . 'includes/dbpass')), array(
 		PDO::ATTR_PERSISTENT	=> true,
 	));
 	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
