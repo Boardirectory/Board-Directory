@@ -117,5 +117,17 @@ class User {
 			}
 		}
 	}
+	
+	/*
+	 * Logout the user and clear the cookies. 
+	 */
+	public function logout() {
+		session_regenerate_id(true);
+		global $db;
+		$db->query('DELETE FROM sessions WHERE user_id = ' . $this->data['user_id']);
+		setcookie('bis_[user_id]', 0, time() - 1, null, null, false, true);
+		setcookie('bis_[session_start]', 0, time() - 1, null, null, false, true);
+		setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
+	}
 }
  
