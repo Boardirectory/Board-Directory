@@ -98,11 +98,6 @@ ul.profile-icons {
 	list-style: none;
 }
 
-ul.profile-icons:hover {
-	padding-top: 10px;
-	list-style: none;
-}
-
 /* Rollover state */
 ul.profile-icons li {
 	float: left;

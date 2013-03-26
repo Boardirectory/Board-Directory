@@ -5,12 +5,6 @@ ul.topiclist {
 	display: block;
 	list-style-type: none;
 	margin: 0;
-	font-weight: bold;
-	font-family: arial;
-}
-
-a.topiclist, a.forumtitle {
-    color: red;	
 }
 
 ul.forums {
@@ -35,7 +29,7 @@ ul.topiclist li.row dl {
 ul.topiclist dt {
 	display: block;
 	float: left;
-	width: 51%;
+	width: 50%;
 	font-size: 1.1em;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -44,6 +38,7 @@ ul.topiclist dt {
 ul.topiclist dd {
 	display: block;
 	float: left;
+	border-left: 1px solid #FFFFFF;
 	padding: 4px 0;
 }
 
@@ -80,7 +75,7 @@ li.row strong {
 }
 
 li.row:hover {
-	background-color: none;
+	background-color: #f6f6f6;
 }
 
 li.row:hover dd {
@@ -237,7 +232,6 @@ div[class].topic-actions {
 	width: 76%;
 	float: left;
 	clear: both;
-	font-family: sans-serif;
 }
 
 .postbody .ignore {
@@ -324,7 +318,7 @@ div[class].topic-actions {
 	min-height: 3em;
 	overflow: hidden;
 	line-height: 1.4em;
-	font-family: "sans-serif", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	color: #333333;
 	padding-bottom: 1px;

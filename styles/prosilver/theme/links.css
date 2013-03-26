@@ -7,7 +7,7 @@ a {
 	unicode-bidi: embed;
 }
 
-a:link	{ color: black; text-decoration: none; }
+a:link	{ color: #898989; text-decoration: none; }
 a:visited	{ color: #898989; text-decoration: none; }
 a:hover	{ color: #d3d3d3; text-decoration: underline; }
 a:active	{ color: #d2d2d2; text-decoration: none; }
