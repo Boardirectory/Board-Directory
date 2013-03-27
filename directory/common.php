@@ -12,7 +12,7 @@ include_once($directory_root_path . 'classes/user.php');
 include_once($directory_root_path . 'classes/bis.php');
 include_once($directory_root_path . 'classes/template.php');
 
-$db = new PDO('mysql:host=localhost;dbname=bis', 'bis', base64_decode(file_get_contents($directory_root_path . 'includes/dbpass')), array(
+$db = new PDO('mysql:host=localhost;dbname=bis', 'bis', base64_decode(file_get_contents($directory_root_path . 'protected/dbpass')), array(
 	PDO::ATTR_PERSISTENT	=> true,
 ));
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
