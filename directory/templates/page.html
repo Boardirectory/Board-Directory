@@ -14,18 +14,48 @@
 		<link href="{{directory_root}}theme.php?theme={{style.name}}" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
-		<div id="outterWrap">
-			<div id="innerWrap">
-				<div id="header">
-					<a href="{{directory_root}}" id="logo"></a>
-				</div>
-				<div id="content">
-					<div id="nav-bar">
-						<a class="nav-item" id="nav-item-index" href="{{directory_root}}">{{lang.index}}</a>
-					</div>
-				</div>
-				{% include template %}
+		
+                    <div id="navbar_top">
+                        {{lang.sitename}}
+			<div class="myinner">
+				<ul>
+					<li><a href="{U_INDEX}">Home</a></li>
+					<li><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li>
+					<li><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}">{L_FAQ}</a></li>
+					<!-- IF not S_IS_BOT --><li id="right"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a></li><!-- ENDIF -->
+					<!-- IF not S_IS_BOT --><!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><li id="right"><a href="{U_REGISTER}">{L_REGISTER}</a></li><!-- ENDIF --><!-- ENDIF -->
+				</ul>
 			</div>
+                    </div>
+            
+                    <div id="headertop">
+                        <div class="myinner">
+                            <a href="{{directory_root}}" id="logo"></a>
+                        </div>
+                    </div>
+                    <div id="breadcrumbs">
+                        <ul>
+                            <li class="icon-home"><a href="#">Home</a></li>
+                            <li class="right"><a href="#">Right</a></li>
+                        </ul>
+                    </div>                 
+                        <div id="wrap">
+                            <div id="wrapper">
+				{% include template %}
+                            </div>
+			</div>
+            	<div class="finner">
+		<div id="footerbar">
+			<ul>
+			<li><a href="#" accesskey="h">Home</a></li>
+			</ul>
 		</div>
+	
+<!-- ADD FOOT_BOX.html -->
+
+	</div>
+            <div class="copyright">
+                BoarDirectory.org &copy; All Rights Reserved.
+            </div>
 	</body>
 </html>
