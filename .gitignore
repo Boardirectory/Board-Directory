@@ -3,3 +3,4 @@
 /board/
 /directory/cache/
 /config.php
+/directory/protected/log.html
