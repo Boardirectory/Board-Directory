@@ -5,3 +5,6 @@
 **Board Username:** `admin`
 
 **Board Password:** `admin`
+
+**Error Log: :** `./directory/protected/log.html`
+_(If the file isn't present, you have had no **(catchable)** errors.)_
