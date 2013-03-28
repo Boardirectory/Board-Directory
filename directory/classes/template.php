@@ -48,8 +48,9 @@ class DirectoryTemplate {
 		die($this->twig->loadTemplate($this->page)->render($this->vars));
 	}
 	private function prepareVars() {
-		global $directory_root_path, $directory;
-		$this->vars['lang'] = $directory->user->lang;
+		global $directory_root_path, $user;
+		include $directory_root_path . 'language/' . $user->lang . '/common.php';
+		$this->vars['lang'] = $lang;
 		$this->vars['template'] = $this->template;
 		$this->vars['directory_root'] = $directory_root_path;
 		$this->vars['style']['image_path'] = $directory_root_path . 'themes/images/default/';
