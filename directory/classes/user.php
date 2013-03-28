@@ -131,3 +131,4 @@ class User {
 		setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
 	}
 	
+}
