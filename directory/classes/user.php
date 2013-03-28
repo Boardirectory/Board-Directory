@@ -16,9 +16,10 @@ if(!defined('IN_DIRECTORY')) {
 class User {
 	public $data = array();	
 	public $loggedIn = false;
+	public $lang = 'en';
 	
 	public function User() {
-
+		
 	}
 	
 	/**
@@ -129,5 +130,4 @@ class User {
 		setcookie('bis_[session_start]', 0, time() - 1, null, null, false, true);
 		setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
 	}
-}
- 
+	
