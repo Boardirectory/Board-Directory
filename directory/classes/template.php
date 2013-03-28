@@ -25,7 +25,7 @@ class DirectoryTemplate {
 		global $directory_root_path;
 		include_once($directory_root_path . 'Twig/Autoloader.php');
 		Twig_Autoloader::register();
-		$this->root = $diretory_root_path . 'templates';
+		$this->root = $directory_root_path . 'templates';
 	}
 	
 	public function setMode($mode) {
