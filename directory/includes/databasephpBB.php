@@ -1,7 +1,6 @@
 <?php
-if(!defined('IN_DIRECTORY')) {
+if(!defined('IN_DIRECTORY'))
 	exit;
-}
 try {
 	global $phpbb_root_path;
 	include($phpbb_root_path . 'config.php');

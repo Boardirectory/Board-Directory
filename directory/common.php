@@ -1,7 +1,6 @@
 <?php
-if(!defined('IN_DIRECTORY')) {
+if(!defined('IN_DIRECTORY'))
 	exit;
-}
 session_name('bis');
 $phpbb_root_path = './../';
 include_once($directory_root_path . 'classes/errorhandler.php');

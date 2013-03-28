@@ -1,8 +1,7 @@
 <?php
 
-if(!defined('IN_DIRECTORY')) {
+if(!defined('IN_DIRECTORY'))
 	exit;
-}
 
 function requestVar($var, $default) {
 	if($_POST[$var]) {
