@@ -16,6 +16,8 @@ if(!defined('IN_DIRECTORY')) {
 class User {
 	public $data = array();	
 	public $loggedIn = false;
+	private $auth = array();
+	private $groups = array();
 	
 	public function User() {
 
@@ -107,6 +109,9 @@ class User {
 					setcookie('bis_[session_start]', $session['session_start'], time() + 3600, '/', null, false, true);
 					setcookie('bis_[session_time]', $time, time() + 3600, '/', null, false, true);
 					$this->loggedIn = true;
+					$query = $db->prepare("SELECT * FROM users WHERE user_id = {$session['user_id']}");
+					$query->execute();
+					$this->data = $query->fetch(PDO::FETCH_ASSOC);
 				} else {
 					session_regenerate_id(true);
 					$db->query('DELETE FROM sessions WHERE user_id = ' . $session['user_id']);
@@ -128,6 +133,42 @@ class User {
 		setcookie('bis_[user_id]', 0, time() - 1, null, null, false, true);
 		setcookie('bis_[session_start]', 0, time() - 1, null, null, false, true);
 		setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
+	}
+	
+	
+	/**
+	 * Returns the permissionset the user has. 
+	 * @return array List of group IDs. 
+	 */
+	public function getAuth() {
+		if($this->auth)
+			return $this->auth;
+		$groupIDs = array_keys($this->getGroups());
+		foreach($groupIDs as $groupID) {
+			$permissionSet = AuthHandler::getPermissionSet($groupID);
+			foreach($permissionSet as $permission => $value) {
+				if($value == 2)
+					$this->auth[$permission] = 2;
+				elseif($value == 1 && $this->auth[$permission] != 2)
+					$this->auth[$permission] = 1;
+			}
+		}
+		return $this->auth;
+	}
+	
+	/**
+	 * Returns all groups the user is member of. 
+	 * @return array List of group IDs. 
+	 * @global PDO $db
+	 */
+	public function getGroups() {
+		global $db;
+		$query = $db->prepare("SELECT group_id FROM group_users WHERE user_id = {$this->data['user_id']}");
+		$query->execute();
+		$groups = array();
+		while($group = $query->fetch(PDO::FETCH_NUM)) {
+			$groups[$group] = true;
+		}
 	}
 }
  

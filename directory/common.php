@@ -21,4 +21,5 @@ $user = new User();
 $bis = new BIS();
 $template = new DirectoryTemplate();
 $user->checkSession();
+$user->getGroups();
 ?>
