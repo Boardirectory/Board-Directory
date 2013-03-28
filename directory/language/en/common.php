@@ -24,6 +24,7 @@ $lang = array_merge($lang, array(
 	'index'				=> 'Index',
 	'site_description'	=> 'Indexing all boards under one directory!',
 	'sitename'			=> 'Boardirectory Directory',
+        'board_top'             => 'Top 5 Boards'
 ));
 
 ?>
