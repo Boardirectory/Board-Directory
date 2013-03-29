@@ -36,17 +36,6 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   PRIMARY KEY (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `sessions` (`session_id`, `user_id`, `session_start`, `session_time`, `session_ip`) VALUES
-('02vh9mfjrm1bohagb9gbt54m13', 1, 1364503996, 1364503996, '127.0.0.1'),
-('1eat6ggmsj4f8im17nc9dvi7r5', 1, 1364503996, 1364504721, '127.0.0.1'),
-('3dcuh8d9r6ee5rku9e24ea80j0', 1, 1364503996, 1364503996, '127.0.0.1'),
-('8akt3bqnji2lir5auqsq0oklm4', 1, 1364503995, 1364503996, '127.0.0.1'),
-('98cnrb5kodb1bl69mfb0pu98q2', 1, 1364503996, 1364503996, '127.0.0.1'),
-('e12gepnvcgpq2o68qtdj09c220', 1, 1364503996, 1364503996, '127.0.0.1'),
-('efngh0vsaeiba16r9oun8a7kv7', 1, 1364503995, 1364503995, '127.0.0.1'),
-('m4aqe1897lrck0dol4g5ht29d4', 1, 1364503995, 1364503995, '127.0.0.1'),
-('qprjjitdbkvdb0mo0hk734ko37', 1, 1364503995, 1364503995, '127.0.0.1');
-
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
@@ -56,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_phpbb_id`) VALUES
+(0, 'Guest', 1),
 (1, 'admin', 2);
 
 

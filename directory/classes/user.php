@@ -15,7 +15,6 @@ if(!defined('IN_DIRECTORY')) {
 
 class User {
 	public $data = array();	
-	public $loggedIn = false;
 	private $auth = array();
 	private $groups = array();
 	
@@ -46,17 +45,18 @@ class User {
 		$query = $db->prepare('SELECT * FROM users WHERE user_name = :name');
 		$query->bindValue(':name', $username, PDO::PARAM_STR);
 		$query->execute();
-		$this->data = $query->fetch(PDO::FETCH_ASSOC);
-		if(!$this->data)
+		$data = $query->fetch(PDO::FETCH_ASSOC);
+		if(!$data)
 			return false;
 		require_once($directory_root_path . 'includes/databasephpBB.php');
-		$query = $dbphpBB->prepare('SELECT user_password FROM users WHERE user_id = ' . $this->data['user_phpbb_id']);
+		$query = $dbphpBB->prepare('SELECT user_password FROM users WHERE user_id = ' . $data['user_phpbb_id']);
 		$query->execute();
 		if(!$hash = $query->fetch(PDO::FETCH_ASSOC)['user_password'])
 			return false;
 		require_once($directory_root_path . 'includes/phpbbfunctions.php');
 		if(!phpbb_check_hash($password, $hash))
 				return false;
+		$this->data = $data;
 		$this->createSession();
 		return true;
 	}
@@ -90,10 +90,10 @@ class User {
 	 * Checks if the current user is logged in. 
 	 */
 	public function checkSession() {
+		global $db;
 		session_start();
 		$cookies = getCookie('bis_', array());
 		if($cookies['user_id']) {
-			global $db;
 			$query = $db->prepare('SELECT * FROM sessions WHERE session_id = \'' . session_id() . '\'');
 			$query->execute();
 			if($session = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -108,7 +108,6 @@ class User {
 					setcookie('bis_[user_id]', $session['user_id'], time() + 3600, '/', null, false, true);
 					setcookie('bis_[session_start]', $session['session_start'], time() + 3600, '/', null, false, true);
 					setcookie('bis_[session_time]', $time, time() + 3600, '/', null, false, true);
-					$this->loggedIn = true;
 					$query = $db->prepare("SELECT * FROM users WHERE user_id = {$session['user_id']}");
 					$query->execute();
 					$this->data = $query->fetch(PDO::FETCH_ASSOC);
@@ -120,6 +119,11 @@ class User {
 					setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
 				}
 			}
+		}
+		if(!$user->data['user_id']) {
+			$query = $db->prepare('SELECT * FROM users WHERE user_id = 0');
+			$query->execute();
+			$this->data = $query->fetch(PDO::FETCH_ASSOC);
 		}
 	}
 	
@@ -133,6 +137,9 @@ class User {
 		setcookie('bis_[user_id]', 0, time() - 1, null, null, false, true);
 		setcookie('bis_[session_start]', 0, time() - 1, null, null, false, true);
 		setcookie('bis_[session_time]', 0, time() - 1, null, null, false, true);
+		$query = $db->prepare('SELECT * FROM users WHERE user_id = 0');
+		$query->execute();
+		$this->data = $query->fetch(PDO::FETCH_ASSOC);
 	}
 	
 	
