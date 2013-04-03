@@ -8,3 +8,5 @@
 
 **Error Log: :** `./directory/protected/log.html`
 _(If the file isn't present, you have had no **(catchable)** errors.)_
+
+General Directory Script (c) Jeroen Bollen & Brad Veryard, All Rights Reserved
