@@ -10,22 +10,55 @@
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		{{META}}
-		<title>{{lang.sitename}} {% if pagetitle %}&bull; {{PAGE_TITLE}} {% endif %}</title>
+		<title>{{lang.sitename}} {% if pagetitle %}  &bull; {{pagetitle}} {% endif %}</title>
 		<link href="{{directory_root}}theme.php?theme={{style.name}}" type="text/css" rel="stylesheet" />
-	</head>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+              
+        </head>
 	<body>
-		<div id="outterWrap">
-			<div id="innerWrap">
-				<div id="header">
-					<a href="{{directory_root}}" id="logo"></a>
-				</div>
-				<div id="content">
-					<div id="nav-bar">
-						<a class="nav-item" id="nav-item-index" href="{{directory_root}}">{{lang.index}}</a>
-					</div>
-				</div>
-				{% include template %}
+            <div id="wrap">
+		<div id="navbar_top">
+			<div class="myinner">
+				<ul>
+					<li><a href="{{directory_root}}">Home</a></li>
+				</ul>
 			</div>
 		</div>
+		<div id="headertop">
+			<div class="myinner">
+				<a href="{{directory_root}}" id="logo"></a>
+			</div>
+		</div>
+		<div id="breadcrumbs">
+			<ul>
+				<li class="icon-home"><a href="#">Home</a></li>
+				<li class="right"><a href="#">Right</a></li>
+			</ul>
+		</div>				 
+		
+			<div id="wrapper">
+				{% include template %}
+			</div>
+		
+
+            <div id="footer">
+            			<div id="footerbar">
+                                    <div class="innerfoot">
+				<ul>
+					<li>
+						<a href="#" accesskey="h">Home</a>
+					</li>
+				</ul>
+                                    </div>
+			</div>
+            </div>
+            </div>
+                <div style="clear: both"></div>
+                <br />
+		<div class="copyrighter">
+			Boardirectory.org &copy; All Rights Reserved.<br />
+                        Directory by Jeroen Bollen & Brad Veryard.
+		</div>   
+
 	</body>
 </html>
